@@ -1,0 +1,14 @@
+
+<div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="username" />
+    <!-- <small id="helpId" class="text-muted">Hello {{username}} </small> -->
+</div>
+
+<button *ngIf="username"
+    type="button"
+    class="btn btn-primary" (click)="fetchUname()"
+>
+    Fetch Username
+</button>
+
+

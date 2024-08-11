@@ -1,0 +1,16 @@
+
+parent to child -> @Input , custom property binding 
+child to parent  -> @Output , custom event binding 
+
+@input 
+@Output 
+trackBy 
+
+ngSwitch  - 
+ng-template 
+ng-container 
+ng-content 
+@view 
+
+TDF 
+Reactive 

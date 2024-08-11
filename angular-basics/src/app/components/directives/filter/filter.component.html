@@ -1,0 +1,19 @@
+
+<div class="form-check form-check-inline">
+    <input class="form-check-input"  type="radio"  name="category" value="all" 
+    [(ngModel)]="filterButton" (change)="handleChange()"/>
+    <label class="form-check-label" for="">All ({{all}})</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio"  name="category"  value="beauty"  [(ngModel)]="filterButton"  (change)="handleChange()"/>
+    <label class="form-check-label" for="">Beauty ({{beauty}})</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input"  type="radio"  name="category" value="groceries"  [(ngModel)]="filterButton" (change)="handleChange()"/>
+    <label class="form-check-label" for="">groceries ({{groceries}}) </label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio"  name="category"  value="furniture"   [(ngModel)]="filterButton" (change)="handleChange()"/>
+    <label class="form-check-label" for="">furniture ({{furniture}})</label>
+</div>
+

@@ -1,0 +1,77 @@
+
+<!-- <ul>
+    <li *ngFor="let n of names">{{n}}</li>
+</ul> -->
+
+
+<!-- <ul>
+    <li *ngFor="let n of names;index as i;first as f;even as e">
+        <p *ngIf="e;else falseblock">index = {{i}} value = {{n}} 
+        {{f}}</p>
+        <ng-template #falseblock>
+            not even 
+        </ng-template>
+    </li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let n of names;index as i;first as f;even as e">
+        <p *ngIf="e;then trueblock;else falseblock">index = {{i}} value = {{n}} 
+        {{f}}</p>
+        <ng-template #trueblock>
+            even index  {{n}}
+        </ng-template>
+        <ng-template #falseblock>
+            not even index {{n}}
+        </ng-template>
+    </li>
+</ul>
+ -->
+
+
+<!-- <ul>
+    <li *ngFor="let n of products">{{n | json}}</li>
+</ul> -->
+
+<!-- <div class="row">
+    <div class="col-3 mb-3" *ngFor="let prod of products">
+        <div class="card">
+            <img src={{prod.images[0]}} class="card-img-top" height="150px"/>
+            <div class="card-body">
+               <div class="card-text">{{prod.title}}</div>               
+               <p class="float-end bg-warning p-2" *ngIf="prod.discountPercentage">{{prod.  discountPercentage}}% off</p>
+               <p>${{prod.price}}</p>
+               <p>{{prod.description}}</p>
+                <p [ngStyle]="{'font-weight':'bold',
+                'font-size.px':'16',
+                'color':prod.stock>0 ? 'green':'red'}">{{prod.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}</p>
+                <button type="button" class="btn btn-info" [disabled]="prod.stock > 0 ? isDisabled : !isDisabled"  
+                [ngClass]="prod.stock > 0 ? 'text-dark' : 'colorcss'"
+                    >
+                    Add to Cart
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+<h1>Parent Comp </h1>
+<app-filterwithdropdown [categories]="categories" (selectCategoryChange)="handleChange($event)"
+[totalProducts]="totalProducts"></app-filterwithdropdown>
+<!-- <app-filter [all]="totalProducts" [beauty]="beautyProducts" [groceries]="groceriesProducts" [furniture]="furnitureProducts" (filterButtonChanged)="onFilterChanged($event)"></app-filter> -->
+
+<div class="row">
+        <!-- <div class="col-3 mb-3" *ngFor="let prod of productlist" >
+            <app-product-card [prod]="prod"  [isDisabled]="isDisabled" ></app-product-card>
+        </div> -->
+        @for (prod of productlist;track $index) {
+            <div class="col-3 mb-3">
+            <app-product-card [prod]="prod"  [isDisabled]="isDisabled" ></app-product-card>
+            </div>
+        }
+        @empty {<h1>No product found</h1>}
+        
+</div>
+
+
+<!-- <app-ngfor></app-ngfor> -->

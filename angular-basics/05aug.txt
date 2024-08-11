@@ -1,0 +1,25 @@
+component based  -   <app-root></app-root>
+SPA  
+
+Data Binding -> 
+one way -> TS -- > HTML 
+            HTML ---> TS 
+two way TS <-----> HTML 
+
+
+1. string interpolation  - string {{}}
+2. property binding 
+3. attribute binding
+4. event binding 
+5. two way data binding  
+
+==========================================
+Directives - 
+1. component directive 
+2. structural directive - *ngIf , *ngFor, *ngSwitch
+3. attribute directive - ngClass , ngStyle 
+4. custom directive 
+
+
+ternary operator 
+? - optional 

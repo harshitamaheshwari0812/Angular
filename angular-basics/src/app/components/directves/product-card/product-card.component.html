@@ -1,0 +1,19 @@
+
+    <div class="card ">
+        <img src={{prod.images[0]}} class="card-img-top" height="150px"/>
+        <div class="card-body">
+           <div class="card-text">{{prod.title}}</div>               
+           <p class="float-end bg-warning p-2" *ngIf="prod.discountPercentage">{{prod.  discountPercentage}}% off</p>
+           <p>${{prod.price}}</p>
+           <p>{{prod.description}}</p>
+            <p [ngStyle]="{'font-weight':'bold',
+            'font-size.px':'16',
+            'color':prod.stock>0 ? 'green':'red'}">{{prod.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}</p>
+            <button type="button" class="btn btn-info" [disabled]="prod.stock > 0 ? isDisabled : !isDisabled"  
+            [ngClass]="prod.stock > 0 ? 'text-dark' : 'colorcss'"
+                >
+                Add to Cart
+            </button>
+            
+        </div>
+    </div>

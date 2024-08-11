@@ -1,0 +1,23 @@
+*ngFor -> for loop
+
+index 
+return true or false 
+first 
+last 
+even 
+odd 
+
+products= [
+    {},{},{},{}
+]
+
+@Input decorator ->
+custom proptery binding 
+Parent ----> child 
+
+==============================================
+@Input decorator 
+@Output 
+*ngSwitch
+trackBy 
+Forms 

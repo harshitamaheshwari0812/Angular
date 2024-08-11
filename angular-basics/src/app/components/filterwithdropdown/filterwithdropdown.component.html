@@ -1,0 +1,13 @@
+<div class="mb-3">
+    <label for="" class="form-label">categories</label>
+    <select class="form-select form-select-lg" [(ngModel)]="category" (change)="changeCategory($event)">
+        <option value="" selected disabled>Select one</option>
+        <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+        <option value="all">All</option>
+    </select>
+</div>
+<!-- <h4 *ngIf="category">{{category}} category : {{totalProducts}} products found</h4> -->
+
+@if (category) {
+    <h4>{{category}} category : {{totalProducts}} products found</h4>
+}
